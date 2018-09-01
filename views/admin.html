@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="views/pages/css/normalize.css/">
+    <link rel="stylesheet" href="views/pages/css/skeleton.css/">
+    <title>Add user</title>
+    <script src = "/app.js"></script>
+    <script src = "base.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/4.0/MicrosoftAjax.js" type="text/javascript"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-by-three six columns">
+                    <form class="addUser_form" action="#">
+                            <label for="name">Имя и фамилия пользователя:</label>
+                            <input type="text" placeholder="Имя и фамилия" id="name">
+                            <label for="address">Адрес пользователя:</label>
+                            <input type="text" placeholder="Адрес" id="address">
+                            <label for="password">Введите логин для пользователя:</label>
+                            <input type="text" placeholder="Логин" id="login">
+                            <input type="button" id="el" value="Добавить пользователя" onclik="addNewUser()">
+                    </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       //import {addUser} from './models/base.js';
+        var user = {nm: null,
+                    adr: null, 
+                    log: null
+                    };
+
+        var button = document.getElementById('el');
+        el.addEventListener('click', function(addNewUser) {       
+            user.nm = document.getElementById('name').value;
+            user.adr = document.getElementById('address').value;
+            user.log = document.getElementById('login').value;
+            console.log(user)
+           // export {el}
+            addUser(user.log, user.nm, user.nm, user.adr);
+            console.log(addUser1.InsertQuery);
+            
+        })
+        
+        
+        //console.log(addUser(user.log, user.nm, user.nm, user.adr));
+         //   export {addNewUser};
+        
+        //import {connectToDb} from './models/database';
+        
+            
+        //connectToDb();
+        //addUser(user.log, user.nm, user.nm, user.adr);
+        //}
+    </script>
+    
+</body>
+</html>
